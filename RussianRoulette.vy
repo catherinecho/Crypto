@@ -5,6 +5,7 @@ randomnumber: uint256
 playersTurn: uint256
 losers: DynArray[address, 100]
 players: DynArray[address, 100]
+emptyPlayers: DynArray[address, 100]
 
 @external
 def __init__():
@@ -22,7 +23,11 @@ def addPlayer (Player: address):
     assert Player not in self.players
     assert Player not in self.losers
     self.players.append(Player)
-        
+
+@external 
+def lose (Player: address):
+    self.losers.append(Player)    
+    self.players= self.emptyPlayers
     
 #@external
 #def random() -> uint256:
