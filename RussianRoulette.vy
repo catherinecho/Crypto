@@ -5,7 +5,7 @@ randomnumber: uint256
 playersTurn: uint256
 losers: DynArray[address, 100]
 players: DynArray[address, 100]
-found: bool
+
 @external
 def __init__():
     self.creator= msg.sender
@@ -19,9 +19,9 @@ def setOdds(oneInThisMany: uint256):
 
 @external 
 def addPlayer (Player: address):
-    self.found = False
     assert Player not in self.players
     assert Player not in self.losers
+    self.players.append(Player)
         
     
 #@external
