@@ -29,8 +29,8 @@ def lose (Player: address):
     self.players= self.emptyPlayers
     
 @internal
-def random() -> uint256:
-    randomnumber: uint256 =  block.number%self.odds
+def random() -> uint256
+    randomnumber: uint256 =block.timestamp % self.odds
     return randomnumber
 
 
