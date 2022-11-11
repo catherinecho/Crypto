@@ -42,3 +42,7 @@ def play():
         self.lose(nextplayer)
     else:
         self.playersTurn = self.playersTurn % len(self.players) + 1
+
+@external 
+def isALoser(person: address):
+    assert person not in self.losers
