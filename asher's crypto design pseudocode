@@ -1,0 +1,8 @@
+#When economy indicators show recession, slash gas prices
+using chainlink, get the price of NASDAQ
+if(price decreasing):
+	self.gasprice = self.gasprice/2
+#On AsherB's birthday all gas fees are given to me 
+if(date == june 13):
+	transfer(asher's address, gasprice)
+#When economy is good, raise gas prices by proportional margin and donate the fees to charity
